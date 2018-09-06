@@ -1,6 +1,6 @@
 package com.podo.todo.controller;
 
-import com.podo.todo.NoContentException;
+import com.podo.todo.exception.NoContentException;
 import com.podo.todo.model.Item;
 import com.podo.todo.model.RequestedItem;
 import com.podo.todo.service.ItemService;
@@ -46,11 +46,5 @@ public class ItemController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteItem(@PathVariable int itemId) {
         itemService.deleteItem(itemId);
-    }
-
-    @ExceptionHandler(NoContentException.class)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void handleNoContent() {
-
     }
 }

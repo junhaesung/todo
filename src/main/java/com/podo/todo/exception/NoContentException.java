@@ -1,4 +1,4 @@
-package com.podo.todo;
+package com.podo.todo.exception;
 
 public class NoContentException extends RuntimeException {
     public NoContentException() {
